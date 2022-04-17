@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
+
+:root{
+  /*définition du thème des polices */
+  --font-color--titleh1: #fff;
+  --font-color--titleh2: #fff;
+  --font-color--titleh3: #76b0c7;
+  --font-color--p:#fff;
+
+  /*définitiion du thème des arrière plans*/
+  --bgd-body:#555;
+
+}
+
+body{ 
+  background-color: var(--bgd-body);
+  font-family: Poppins, arial, sans-serif;
+}
+
+header{
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: solid 2px rgb(255, 255, 255);
+  margin: 0 2vw;
+  height : 23vh;
+
+}
+
+.header-left, .header-right{
+}
+
+
+.header-left{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 70vw;
+  height : 23vh;
+
+
+}
+
+.header-title{
+  font-weight: 800;
+  font-size: 4em;
+  margin: auto auto;
+  text-align: center;
+  letter-spacing: 0.8vw;
+  color: var(--font-color--titleh1);
+}
+
+.header-image-subcontent{
+  color:var(--font-color--p);
+  width: 20vw;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  rotate: -27deg;
+}
+
+.header-subtitle{
+  color: var(--font-color--titleh2);
+  margin-right: 7vw;
+  font-weight: 400;
+}
+
+.header-subsubtitle{
+  color: var(--font-color--titleh3);
+  margin-right: 2.5vw;
+  margin-top: 1vh;
+  font-weight: 400;
+}
+
+.header-right{
+  width: 30vw;
+  height : 23vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-image{
+  height: 13vh;
+  max-height: 13vh;
+}
+.section-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.image-section{
+  width: 50px;
+  height: auto;
+  margin: 0 2vw;
+}
+
+.main-section{
+  margin: 3vh 2vw;
+}
+
+.section-content{
+  display: none;
+}
+.section-header{
+  /* display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center; */
+}
+
+.title-section{
+  color:var(--font-color--titleh3);
+  font-size: 2em;
+  display: inline-block;
+  font-weight: bold;
+  margin-left: 3vw ;
+  text-transform: capitalize;
+}
+
+.image-section:enabled {
+
+  filter: invert(55%);
+}
+
+#list-me:target{
+  display: block;
+}
