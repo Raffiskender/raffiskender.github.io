@@ -4,7 +4,7 @@
   /*définition du thème des polices */
   --font-color--titleh1: #fff;
   --font-color--titleh2: #fff;
-  --font-color--titleh3: #76b0c7;
+  --font-color--titleh3: #ddaf4c;
   --font-color--p:#fff;
 
   /*définitiion du thème des arrière plans*/
@@ -24,23 +24,16 @@ header{
   border-bottom: solid 2px rgb(255, 255, 255);
   margin: 0 2vw;
   height : 23vh;
-
 }
-
-.header-left, .header-right{
-}
-
 
 .header-left{
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   width: 70vw;
   height : 23vh;
-
-
 }
 
 .header-title{
@@ -87,6 +80,7 @@ header{
   height: 13vh;
   max-height: 13vh;
 }
+
 .section-title{
   display: flex;
   flex-direction: row;
@@ -101,18 +95,12 @@ header{
   margin: 0 2vw;
 }
 
-.main-section{
-  margin: 3vh 2vw;
+.image-section:hover {
+  filter: invert(55%) drop-shadow(0px 0 15px #BBB);
 }
 
-.section-content{
-  display: none;
-}
-.section-header{
-  /* display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center; */
+.main-section{
+  margin: 3vh 2vw;
 }
 
 .title-section{
@@ -124,11 +112,55 @@ header{
   text-transform: capitalize;
 }
 
-.image-section:enabled {
-
-  filter: invert(55%);
+.section-content{
+  display: none;
+  color: var(--font-color--p);
+  margin: 0 0 0 calc(50px + 7vw);
+  line-height: 1.2em;
 }
 
-#list-me:target{
+.item-me-property, .item-formation-property, .item-experience-property, .item-knowHow-property {
+  font-weight: bold;
+  color:var(--font-color--titleh3);
+  filter: brightness(1.42);
+}
+
+.section-me-title:focus + .me-content, .section-formation-title:focus + .formation-content, .section-experience-title:focus + .experience-content, .section-knowHow-title:focus + .knowHow-content, .section-laius-title:focus + .laius-content, .section-legal-title:focus + .legal-content {
+  animation-duration: 0.8s;
+  animation-name: appear;
   display: block;
 }
+
+.section-content:hover{
+  display: block;
+}
+
+.section-title:focus > .image-section {
+  animation-duration: 1s;
+  animation-name: changeImageColor;
+  filter: invert(55%) drop-shadow(0 0 15px #BBB);
+
+}
+
+  @keyframes appear {
+    from {
+      color: var(--bgd-body);
+    }
+
+    to{
+      color: var(--font-color--p);
+    }
+  }
+
+  @keyframes changeImageColor {
+  
+    from {
+      filter: invert(0%)
+    }
+
+    to{
+      filter: invert(55%) drop-shadow(0 0 15px #BBB);
+    }
+  }
+
+  /*selon mika, mettre l'icone pas de photo avec cette couleur : #4c7fdd
