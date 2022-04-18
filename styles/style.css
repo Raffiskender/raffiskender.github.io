@@ -118,6 +118,7 @@ header{
   font-weight: bold;
   margin-left: 3vw ;
   text-transform: capitalize;
+  border: none;
 }
 
 .section-content{
@@ -143,7 +144,6 @@ justify-content: flex-start;
   font-weight: bold;
   color:var(--font-color--titleh3);
   filter: hue-rotate(135deg);
-
 }
 
 .item-me-property{
