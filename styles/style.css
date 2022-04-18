@@ -4,7 +4,7 @@
   /*définition du thème des polices */
   --font-color--titleh1: #fff;
   --font-color--titleh2: #fff;
-  --font-color--titleh3: #ddaf4c;
+  --font-color--titleh3: #4c7fdd;
   --font-color--p:#fff;
 
   /*définitiion du thème des arrière plans*/
@@ -22,27 +22,65 @@ header{
   align-items: center;
   justify-content: flex-start;
   border-bottom: solid 2px rgb(255, 255, 255);
-  margin: 0 2vw;
-  height : 23vh;
+  /* padding-bottom: 2vh; */
+  height : 17vh;
 }
 
 .header-left{
-  box-sizing: border-box;
+  /* box-sizing:content-box; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 70vw;
-  height : 23vh;
+  height : auto;
+
+  /* border: white solid 1px; */
+
 }
 
 .header-title{
   font-weight: 800;
-  font-size: 4em;
-  margin: auto auto;
+  font-size: 8vh;
+  align-self: flex-start;
+  margin-left: 1vw ;
   text-align: center;
   letter-spacing: 0.8vw;
   color: var(--font-color--titleh1);
+  /* border: white solid 1px; */
+
+}
+
+.header-subtitle{
+  font-size: 2vh;
+  color: var(--font-color--titleh2);
+  align-self: center;
+  font-weight: 400;
+  /* border: white solid 1px; */
+
+}
+
+.header-subsubtitle{
+  font-size: 1.5vh;
+  color: var(--font-color--titleh3);
+  align-self: flex-end;
+  margin-top: 0.3vh;
+  font-weight: 400;
+  /* border: white solid 1px; */
+}
+
+.header-right{
+  width: 30vw;
+  height : auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-image{
+  height: fit-content;
+  max-height: 13vh;
 }
 
 .header-image-subcontent{
@@ -52,33 +90,7 @@ header{
   position: absolute;
   text-align: center;
   rotate: -27deg;
-}
-
-.header-subtitle{
-  color: var(--font-color--titleh2);
-  margin-right: 7vw;
-  font-weight: 400;
-}
-
-.header-subsubtitle{
-  color: var(--font-color--titleh3);
-  margin-right: 2.5vw;
-  margin-top: 1vh;
-  font-weight: 400;
-}
-
-.header-right{
-  width: 30vw;
-  height : 23vh;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header-image{
-  height: 13vh;
-  max-height: 13vh;
+  font-size: 2.3vh;
 }
 
 .section-title{
@@ -95,10 +107,6 @@ header{
   margin: 0 2vw;
 }
 
-.image-section:hover {
-  filter: invert(55%) drop-shadow(0px 0 15px #BBB);
-}
-
 .main-section{
   margin: 3vh 2vw;
 }
@@ -113,25 +121,69 @@ header{
 }
 
 .section-content{
+  /* display: flex;
+  flex-wrap: wrap; */
   display: none;
   color: var(--font-color--p);
-  margin: 0 0 0 calc(50px + 7vw);
+  margin: 0 0 0 0;
   line-height: 1.2em;
 }
 
-.item-me-property, .item-formation-property, .item-experience-property, .item-knowHow-property {
-  font-weight: bold;
-  color:var(--font-color--titleh3);
-  filter: brightness(1.42);
+.list-item{
+display: flex;
+justify-content: flex-start;
 }
 
-.section-me-title:focus + .me-content, .section-formation-title:focus + .formation-content, .section-experience-title:focus + .experience-content, .section-knowHow-title:focus + .knowHow-content, .section-laius-title:focus + .laius-content, .section-legal-title:focus + .legal-content {
+.list-item:first-of-type{
+  margin-top: 5px;
+}
+
+.item-property {
+  text-align: end;
+  font-weight: bold;
+  color:var(--font-color--titleh3);
+  filter: hue-rotate(135deg);
+
+}
+
+.item-me-property{
+  width:20vw;
+  min-width: 100px;
+}
+.item-formation-property{
+  width:20vw;
+  min-width: 70px;
+}
+.item-experience-property{
+  width:20vw;
+  min-width: 100px;
+}
+.item-knowHow-property{
+  width:20vw;
+  min-width: 140px;
+}
+
+.section-title:hover > .image-section {
+  filter: invert(55%) drop-shadow(0px 0 15px #BBB);
+}
+
+.section-title:hover > .title-section {
+  filter: drop-shadow(0 0 15px #bbb);
+}
+
+
+.section-title:focus + .section-content{
   animation-duration: 0.8s;
   animation-name: appear;
   display: block;
 }
 
-.section-content:hover{
+ .section-title:focus + .section-content .item-property {
+  animation-duration: 0.8s;
+  animation-name: appear_2;
+} 
+
+.section-content:hover, .section-content:focus{
   display: block;
 }
 
@@ -141,17 +193,25 @@ header{
   filter: invert(55%) drop-shadow(0 0 15px #BBB);
 
 }
+.section-title:focus > .title-section {
+  animation-duration: 1s;
+  animation-name: addDropShaddow;
+  filter: drop-shadow(0 0 15px #BBB);
+
+}
 
   @keyframes appear {
     from {
       color: var(--bgd-body);
     }
-
-    to{
-      color: var(--font-color--p);
+  }
+  @keyframes appear_2{
+  from {
+    color: var(--bgd-body);
     }
   }
 
+}
   @keyframes changeImageColor {
   
     from {
@@ -163,4 +223,24 @@ header{
     }
   }
 
+  @keyframes addDropShaddow {
+  
+    from {
+      filter: none;
+    }
+
+    to{
+      filter: drop-shadow( 0 0 15px #bbb);
+    }
+  }
+
   /*selon mika, mettre l'icone pas de photo avec cette couleur : #4c7fdd
+
+  /*
+    Breaks points des @mediaQuerrys
+    320px — 480px: Mobile devices.
+    481px — 768px: iPads, Tablets.
+    769px — 1024px: Small screens, laptops.
+    1025px — 1200px: Desktops, large screens.
+    1201px and more — Extra large screens, TV.
+  */
