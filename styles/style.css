@@ -41,7 +41,8 @@ header{
 
 .header-title{
   font-weight: 800;
-  font-size: 8vh;
+  font-size: 10vh;
+  /* font-size-max */
   align-self: flex-start;
   margin-left: 1vw ;
   text-align: center;
@@ -81,6 +82,24 @@ header{
 .header-image{
   height: fit-content;
   max-height: 13vh;
+}
+
+#path924, #path934{
+  animation-name: colorChange;
+  animation-duration: 30s; 
+  animation-iteration-count: infinite; 
+  animation-direction: alternate; 
+  stroke:var(--font-color--titleh3);
+  filter:hue-rotate(-30deg);
+}
+
+@keyframes colorChange{
+  from {
+      filter: hue-rotate(0deg);
+  }
+  to {
+      filter: hue-rotate(180deg);
+  }
 }
 
 .header-image-subcontent{
@@ -148,22 +167,45 @@ justify-content: flex-start;
 }
 
 .item-me-property{
-  width:20vw;
+  /* width: 20vw; */
   min-width: 100px;
 }
 .item-formation-property{
-  width:20vw;
+  /* width: 13vw; */
   min-width: 70px;
 }
 .item-experience-property{
-  width:20vw;
+  /* width: 17vw; */
   min-width: 100px;
 }
 .item-knowHow-property{
-  width:20vw;
+  /* width: 20vw; */
   min-width: 140px;
 }
 
+.legal{
+  /* color: var(--font-color--titleh3);
+  filter: hue-rotate(135deg); */
+  width: 80vw;
+  margin: 1rem auto ;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  color: #aaa;
+} 
+
+.list-legal{
+  width: 80vw;
+  margin: 1rem auto;
+}
+
+.laius{
+  width: 80vw;
+  margin: 0.5rem auto;
+}
+.laius:first-of-type {
+  margin: 1rem auto 0 auto;
+}
 .section-title:hover > .image-section {
   filter: invert(55%) drop-shadow(0px 0 15px #BBB);
 }
