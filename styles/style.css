@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 
 :root{
   /*définition du thème des polices */
@@ -11,24 +11,27 @@
   --bgd-body:#555;
 
 }
-
+/*Ici tout ce qui touche au body*/
 body{ 
   background-color: var(--bgd-body);
   font-family: Poppins, arial, sans-serif;
 }
 
+/*Ici le header de la page*/
 header{
+  background-color: var(--bgd-body);
   display:flex;
   align-items: center;
   justify-content: flex-start;
   border-bottom: solid 2px rgb(255, 255, 255);
   /* padding-bottom: 2vh; */
-  height : 17vh;
+  height : 8em;
 }
 
 .header-left{
   /* box-sizing:content-box; */
   display: flex;
+
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -41,19 +44,19 @@ header{
 
 .header-title{
   font-weight: 800;
-  font-size: 10vh;
+  font-size: 5em;
   /* font-size-max */
   align-self: flex-start;
   margin-left: 1vw ;
   text-align: center;
-  letter-spacing: 0.8vw;
+  letter-spacing: 1.0vw;
   color: var(--font-color--titleh1);
   /* border: white solid 1px; */
 
 }
 
 .header-subtitle{
-  font-size: 2vh;
+  font-size: 1.15em;
   color: var(--font-color--titleh2);
   align-self: center;
   font-weight: 400;
@@ -62,11 +65,11 @@ header{
 }
 
 .header-subsubtitle{
-  font-size: 1.5vh;
+  font-size: 1em;
   color: var(--font-color--titleh3);
   align-self: flex-end;
-  margin-top: 0.3vh;
-  font-weight: 400;
+  margin-top: 0.2em;
+  font-weight: 600;
   /* border: white solid 1px; */
 }
 
@@ -80,8 +83,18 @@ header{
 }
 
 .header-image{
-  height: fit-content;
-  max-height: 13vh;
+  height: 6em;
+}
+
+.header-image-subcontent{
+  color:var(--font-color--p);
+  width: 6em;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  rotate: -27deg;
+  font-size: 1em;
+  line-height: 1.5em;
 }
 
 #path924, #path934{
@@ -101,15 +114,14 @@ header{
       filter: hue-rotate(180deg);
   }
 }
+/*Partie du dessous*/
+.main{
+  height: calc(100vh - 8em);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
-.header-image-subcontent{
-  color:var(--font-color--p);
-  width: 20vw;
-  font-weight: bold;
-  position: absolute;
-  text-align: center;
-  rotate: -27deg;
-  font-size: 2.3vh;
 }
 
 .section-title{
@@ -126,18 +138,22 @@ header{
   margin: 0 2vw;
 }
 
+
 .main-section{
-  margin: 3vh 2vw;
+  margin: 1.5vh 2vw;
+  /* border : solid 1px black; */
 }
 
 .title-section{
   color:var(--font-color--titleh3);
-  font-size: 2em;
-  display: inline-block;
+  font-size: 1.8em;
   font-weight: bold;
   margin-left: 3vw ;
   text-transform: capitalize;
-  border: none;
+}
+
+.section-me-title{
+  margin-top: 1em;
 }
 
 .section-content{
