@@ -23,7 +23,13 @@ header{
   display:flex;
   align-items: center;
   justify-content: flex-start;
-  border-bottom: solid 2px rgb(255, 255, 255);
+  border-image: url(../images/vague.svg);
+  border-image-slice: 16 0 16 0;
+  border-image-width: 0px 0px 17px 0px;
+  border-image-outset: 0px 0px 0px 0px;
+  border-image-repeat: stretch stretch; 
+
+  /*border-bottom: solid 1px rgba(255, 255, 255, 0);*/
   /* padding-bottom: 2vh; */
   height : 8em;
 }
@@ -44,7 +50,7 @@ header{
 
 .header-title{
   font-weight: 800;
-  font-size: 5em;
+  font-size: 3.5em;
   /* font-size-max */
   align-self: flex-start;
   margin-left: 1vw ;
@@ -270,7 +276,6 @@ justify-content: flex-start;
     }
   }
 
-}
   @keyframes changeImageColor {
   
     from {
