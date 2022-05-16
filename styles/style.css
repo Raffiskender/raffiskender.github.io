@@ -12,11 +12,55 @@
   --bgd-body-theme:rgb(180, 180, 180);
 
 }
-
+/** Définition des thèmes de coueurs **/
 .dark{
   --bgd-body:#555;
+  --font-color--p:#CCC;
+  --font-color--titleh2: #CCC;
 }
 
+.blue{
+  --font-color--titleh1: #4c7fdd;
+  --font-color--titleh3: #4c7fdd;
+}
+
+.blue-dark{
+  --font-color--titleh1: #4c7fdd;
+  --font-color--titleh3: rgb(145, 206, 255);
+}
+
+.red{
+  --font-color--titleh1: rgb(180, 57, 57);
+  --font-color--titleh3: rgb(180, 57, 57);
+}
+.red-dark{
+  --font-color--titleh1: rgb(180, 57, 57);
+  --font-color--titleh3: rgb(236, 164, 164);
+}
+
+.green{
+  --font-color--titleh1: rgb(47, 156, 4);
+  --font-color--titleh3: rgb(47, 156, 4);
+
+}
+
+.green-dark{
+  --font-color--titleh1: rgb(153, 197, 136);
+  --font-color--titleh3: rgb(47, 156, 4);
+}
+
+.violet{
+  --font-color--titleh3: rgb(136, 35, 161);
+}
+.violet-dark{
+  --font-color--titleh1: rgb(253, 0, 198);
+}
+.f0f{
+  --font-color--titleh3: #f0f;
+}
+.rose-dark{
+  --font-color--titleh1: rgb(253, 0, 198);
+}
 
 /*Ici tout ce qui touche au body*/
 body{ 
@@ -116,11 +160,12 @@ header{
   }
 }
 
-/*La languette*/
+/**------- La languette des couleurs --------*/
+
 .theme-bar{
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 0;
 }
 
 .theme-bar--choices{
@@ -130,11 +175,11 @@ header{
   background-color: var(--bgd-body-theme);
   position: relative;
   top: 0;
-  left: -75px;
+  right: -24px;
   width : 150px;
   height: 25px;
-  border-top-left-radius : 12px;
-  border-bottom-left-radius : 12px;
+  border-top-right-radius : 12px;
+  border-bottom-right-radius : 12px;
   /* border: #4c7 1px solid; */
 }
 
@@ -142,69 +187,61 @@ header{
   display : none;
 }
 
-
 .theme-color {
   width : 18px;
   height : 18px;
   border-radius: 10px;
 }
 
-.blue{
+.theme-bar--choices .blue{
   background-color: rgb(68, 104, 204);
 }
-.red{
+.theme-bar--choices .red{
   background-color: rgb(180, 57, 57);
 }
-.green{
+.theme-bar--choices .green{
   background-color: rgb(47, 156, 4);
 }
-
-.light{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  font-size: 1.1em;
-  color: #fff; 
-  background-color: #333;
+.theme-bar--choices .violet{
+  background-color: rgb(90, 0, 102);
+}
+.theme-bar--choices .f0f{
+  background-color: #f0f
 }
 
-.theme-light span::before{
-    content: "\2605";
-  }
+.theme-color-nightOrDay span::before{
+  content: "\2605";
+  width : 18px;
+  height : 18px;
+  font-size: 1.25em;
+  border-radius: 10px;
+}
 
 .theme-dark span::before{
     content: "\2600";
 }
 
 .theme-bar--languette{
-  /* text-align: center; */
- 
-  /* align-items: center; */
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--bgd-body-theme);
   top : 0;
-  left : 75px;
+  left : 0;
   width: 25px;
   height: 25px;
-  border-radius: 12px;
-
-  /* border: #4c7fdd 1px solid; */
+  border-bottom-right-radius: 12px;
 }
-
 
 .theme-bar--languette-ouverte {
   border-radius: 0px;
-  border-top-right-radius : 12px;
-  border-bottom-right-radius : 12px;
 }
 
 .theme-bar--languette::before{
   content : "\2630"
 }
+
 
 /*Partie main*/
 .main{
