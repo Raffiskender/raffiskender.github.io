@@ -9,9 +9,10 @@
 
   /*définitiion du thème des arrière plans*/
   --bgd-body:rgb(209, 209, 209);
-  --bgd-body-theme:rgb(180, 180, 180);
+  --bgd-languette:rgb(180, 180, 180);
 
 }
+
 /** Définition des thèmes de coueurs **/
 .dark{
   --bgd-body:#555;
@@ -24,18 +25,9 @@
   --font-color--titleh3: #4c7fdd;
 }
 
-.blue-dark{
-  --font-color--titleh1: #4c7fdd;
-  --font-color--titleh3: rgb(145, 206, 255);
-}
-
 .red{
   --font-color--titleh1: rgb(180, 57, 57);
   --font-color--titleh3: rgb(180, 57, 57);
-}
-.red-dark{
-  --font-color--titleh1: rgb(180, 57, 57);
-  --font-color--titleh3: rgb(236, 164, 164);
 }
 
 .green{
@@ -44,22 +36,15 @@
 
 }
 
-.green-dark{
-  --font-color--titleh1: rgb(153, 197, 136);
-  --font-color--titleh3: rgb(47, 156, 4);
-}
-
 .violet{
+  --font-color--titleh1: rgb(253, 0, 198);
   --font-color--titleh3: rgb(136, 35, 161);
 }
-.violet-dark{
-  --font-color--titleh1: rgb(253, 0, 198);
-}
+
+
 .f0f{
-  --font-color--titleh3: #f0f;
-}
-.rose-dark{
   --font-color--titleh1: rgb(253, 0, 198);
+  --font-color--titleh3: #f0f;
 }
 
 /*Ici tout ce qui touche au body*/
@@ -75,6 +60,7 @@ header{
   display:flex;
   align-items: center;
   justify-content: flex-start;
+  border-color: rgba(85, 85, 85, 0);
   border-image: url(../images/vague.svg);
   border-image-slice: 16 0 16 0;
   border-image-width: 0px 0px 17px 0px;
@@ -95,8 +81,9 @@ header{
 .header-title{
   font-weight: 800;
   font-size: 3.5em;
+  justify-self: center;
   align-self: flex-start;
-  margin-left: 1vw ;
+  margin-left: 5vw ;
   text-align: center;
   letter-spacing: 1.0vw;
   color: var(--font-color--titleh1);
@@ -166,20 +153,22 @@ header{
   position: absolute;
   top: 0;
   left: 0;
+  
 }
 
 .theme-bar--choices{
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--bgd-body-theme);
+  background: linear-gradient(180deg, var(--bgd-languette), rgba(255, 255, 255, 0));
   position: relative;
-  top: 0;
-  right: -24px;
-  width : 150px;
-  height: 25px;
-  border-top-right-radius : 12px;
+  top: 24px;
+  right: 0px;
+  width : 25px;
+  height: 160px;
   border-bottom-right-radius : 12px;
+  border-bottom-left-radius : 12px;
   /* border: #4c7 1px solid; */
 }
 
@@ -226,7 +215,8 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--bgd-body-theme);
+  font-size: 1.7em;
+  background-color: var(--bgd-languette);
   top : 0;
   left : 0;
   width: 25px;
@@ -234,13 +224,19 @@ header{
   border-bottom-right-radius: 12px;
 }
 
-.theme-bar--languette-ouverte {
-  border-radius: 0px;
+.theme-bar--languette::before{
+  content : "\2261"
 }
 
-.theme-bar--languette::before{
-  content : "\2630"
+.theme-bar--languette-ouverte {
+  font-size: 1.4em;
+  border-radius: 0px;
 }
+.theme-bar--languette-ouverte::before {
+  content : "\224b"
+}
+
+
 
 
 /*Partie main*/
