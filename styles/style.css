@@ -82,7 +82,7 @@ header{
   font-weight: 800;
   font-size: 3.5em;
   justify-self: center;
-  align-self: flex-start;
+  align-self: center;
   margin-left: 5vw ;
   text-align: center;
   letter-spacing: 1.0vw;
@@ -153,8 +153,41 @@ header{
   position: absolute;
   top: 0;
   left: 0;
-  
 }
+
+
+.theme-bar--languette{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  background-color: var(--bgd-languette);
+  top : 0;
+  left : 0;
+  width: 34px;
+  height: 34px;
+  border-bottom-right-radius: 17px;
+  animation-duration: 3s;
+  animation-name: menu-appear0;
+
+}
+
+.theme-bar--languette::before{
+  content : "\2261"
+}
+
+.theme-bar--languette-ouverte {
+  font-size: 1.7em;
+  border-radius: 0px;
+  margin-right: 0;
+  animation-duration: 3s;
+  animation-name: menu-appear1;
+}
+.theme-bar--languette-ouverte::before {
+  content : "\224b"
+}
+
 
 .theme-bar--choices{
   display: flex;
@@ -163,13 +196,14 @@ header{
   align-items: center;
   background: linear-gradient(180deg, var(--bgd-languette), rgba(255, 255, 255, 0));
   position: relative;
-  top: 24px;
+  top: 34px;
   right: 0px;
-  width : 25px;
-  height: 160px;
-  border-bottom-right-radius : 12px;
-  border-bottom-left-radius : 12px;
+  width : 34px;
+  height: 170px;
+  border-bottom-right-radius : 17px;
+  border-bottom-left-radius : 17px;
   /* border: #4c7 1px solid; */
+
 }
 
 .hide{
@@ -177,8 +211,8 @@ header{
 }
 
 .theme-color {
-  width : 18px;
-  height : 18px;
+  width : 20px;
+  height : 20px;
   border-radius: 10px;
 }
 
@@ -200,43 +234,15 @@ header{
 
 .theme-color-nightOrDay span::before{
   content: "\2605";
-  width : 18px;
-  height : 18px;
+  width : 25px;
+  height : 25px;
   font-size: 1.25em;
-  border-radius: 10px;
+  border-radius: 16px;
 }
 
 .theme-dark span::before{
     content: "\2600";
 }
-
-.theme-bar--languette{
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.7em;
-  background-color: var(--bgd-languette);
-  top : 0;
-  left : 0;
-  width: 25px;
-  height: 25px;
-  border-bottom-right-radius: 12px;
-}
-
-.theme-bar--languette::before{
-  content : "\2261"
-}
-
-.theme-bar--languette-ouverte {
-  font-size: 1.4em;
-  border-radius: 0px;
-}
-.theme-bar--languette-ouverte::before {
-  content : "\224b"
-}
-
-
 
 
 /*Partie main*/
@@ -414,6 +420,16 @@ justify-content: flex-start;
     }
   }
 
+  @keyframes menu-appear1 {
+    from {
+      content : "\2261"
+    }
+  }
+  @keyframes menu-appear0 {
+    from {
+      content : "\224b"
+    }
+  }
   /*selon mika, mettre l'icone pas de photo avec cette couleur : #4c7fdd
 
   /*
