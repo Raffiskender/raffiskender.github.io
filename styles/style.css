@@ -149,9 +149,9 @@ header{
 
 /**------- La languette des couleurs --------*/
 
-.theme-bar{
+.theme-bar{ 
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 0;
 }
 
@@ -352,6 +352,7 @@ justify-content: flex-start;
 .laius:first-of-type {
   margin: 1rem auto 0 auto;
 }
+
 .section-title:hover > .image-section {
   filter: invert(55%) drop-shadow(0px 0 15px #BBB);
 }
@@ -432,15 +433,10 @@ justify-content: flex-start;
       content : "\224b"
     }
   }
-  /*selon mika, mettre l'icone pas de photo avec cette couleur : #4c7fdd
-*/
-    /* Breaks points des @mediaQuerrys */
-    /* 320px — 480px: Mobile devices. */
-    
+
+      
     @media (min-width : 481px) and (max-width : 768px) {
-      .header{
-        background-color: #aaa;
-      }
+
       .header-title{
         
         align-self: flex-start;
@@ -476,25 +472,17 @@ justify-content: flex-start;
       .header-title{
         font-size: 3em;
         width : 100%;
-        /* border : solid #f0f 1px; */
         margin-top: 0;
       }
       .header-title::after{
         content : " Alexanian"
       }
       .header-subtitle{
-    
         margin-top : 0.2rem
-        /* border : solid #f0f 1px; */
-
       }
-
       .header-subsubtitle{
         margin-top : 0.2rem;
         margin-left : 0.2rem;
-
-        /* border : solid #f0f 1px; */
-
       }
       .section-content{
         display: block;
@@ -539,54 +527,54 @@ justify-content: flex-start;
       justify-content: center;
       flex-wrap: wrap;
     }
+
     .header-title{
       font-size: 4em;
       width : 100%;
       /* border : solid #f0f 1px; */
       margin-top: 0;
     }
+
     .header-title::after{
       content : " Alexanian"
     }
-    .header-subtitle{
 
+    .header-subtitle{
       margin-top : 0.2rem
       /* border : solid #f0f 1px; */
-
     }
 
     .header-subsubtitle{
       margin-top : 0.2rem;
       margin-left : 0.2rem;
-
       /* border : solid #f0f 1px; */
-
     }
 
     .main{
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
-
     
     .section-content{
       display: block;
     }
+
     .legal-content{
       display: none;
     }
+
     .section-title{
       width: 100%;
       margin: auto;
     }
+
     .title-section{
       margin: 0;
     }
-
+    
     .image-section{
       margin-left: 10vw;
       /* border: #f0f 1px solid; */
-
     }
 
     .main-section{
@@ -604,6 +592,7 @@ justify-content: flex-start;
     .section-title{
       margin: 1em auto;
     }
+
     .section-title:focus + .section-content{
       animation-duration: 0s;
     }
@@ -612,17 +601,58 @@ justify-content: flex-start;
       animation-duration: 0s;
     } 
     
-    
     .section-title:focus > .image-section {
       animation-duration: 0s;
-    
     }
+
     .section-title:focus > .title-section {
       animation-duration: 0s;
-    
+    }
 }
 
-/*  769px — 1024px: Small screens, laptops.
-    1025px — 1200px: Desktops, large screens.
-    1201px and more — Extra large screens, TV.
-  */
+@media print {
+
+  .header-title{
+    font-size: 2em;
+    width : 100%;
+    /* border : solid #f0f 1px; */
+    margin-top: 0;
+  }
+
+  .header-title::after{
+    content : " Alexanian"
+  }
+
+  .theme-bar--languette{
+    display: none;
+  }
+
+  .section-content{
+    display: block;
+  }
+  .list-me{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .image-section{
+    margin-left: 0;
+  }
+
+  .title-section{
+    font-size: 1.3em;
+  }
+  .image-section{
+    width : 1.3em;
+    height: auto;
+  }
+  .section-me-title{
+    margin-top: 0em;
+  }
+
+  .section-legal{
+    display: none;
+  }
+}

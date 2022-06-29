@@ -3,10 +3,11 @@ const animations = {
 
         const bouttonLanguette = document.querySelector('.theme-bar--languette');
         bouttonLanguette.addEventListener('click', animations.themeChoicesAppear);
+
         const bouttonThemeNightOrDay = document.querySelector('.theme-color-nightOrDay');
         bouttonThemeNightOrDay.addEventListener('click', animations.themeSwitch);
-        const bouttonThemeColor = document.querySelectorAll('.theme-color');
 
+        const bouttonThemeColor = document.querySelectorAll('.theme-color');
         for (const currentButton of bouttonThemeColor){
             currentButton.addEventListener('click', animations.changeThemeColor);
         }
