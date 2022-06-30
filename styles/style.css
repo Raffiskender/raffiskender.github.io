@@ -185,7 +185,9 @@ header{
   animation-name: menu-appear1;
 }
 .theme-bar--languette-ouverte::before {
-  content : "\224b"
+  content : "\224b";
+  animation-name: burger-to-wave;
+  animation-duration : 1s
 }
 
 
@@ -428,6 +430,16 @@ justify-content: flex-start;
       content : "\2261"
     }
   }
+
+  @keyframes burger-to-wave {
+    from {
+      content : "\2261"
+    }
+    to {
+      content : "\224b"
+    }
+  }
+
   @keyframes menu-appear0 {
     from {
       content : "\224b"
