@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Quicksand:wght@300;400;700&display=swap');
+html{
+	background-color: #f0f0f0;
+}
+body{
+	background-color: #fafafa;
+		margin: auto;
+		max-width: 800px;
+		box-shadow: 0px 0px 10px #555;
+	}
+
+p{
+	line-height: 1.1em;
+}
+
+.hide-header-work-designation{
+	display: none;
+}
+
+.header{
+	position: fixed;
+	padding: 1rem;
+	clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 100%);
+	background-color:#c8beb7;
+	height: 12em;
+	width: 100%;
+	max-width: 800px;
+	transition: 0.3s;
+}
+
+.header-little{
+	height: 3em;
+}
+.header-name{
+	font-family: 'Quicksand',  Arial, Helvetica, sans-serif;
+	position: fixed;
+	font-weight: 300;
+	text-transform: capitalize;
+	font-size: 1.7em;
+	margin: 0.7rem 0 0 0.5em;
+}
+
+
+.header-name span{
+font-weight: 300;
+text-transform: uppercase;
+}
+
+.header-work-designation{
+	position: fixed;
+	margin: 3em 0 0 0.5em;
+	font-family: 'Quicksand',  Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	font-size: 1.3em;
+	width: 50%;
+	max-width: 450px;
+	color: #555;
+	text-align: center;
+	align-self: flex-start;
+}
+
+.header-image-container{
+	position: fixed;
+	top: 0em;
+	height: 12em;
+	width: 100%;
+	max-width: 800px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	box-sizing: border-box;
+	transition: 0.3s;
+}
+
+.header-image-container-little{
+		height: 3em;
+	}
+
+.header-image{
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	transition: 0.3s;
+}
+
+.header-image-little{
+	position: fixed;
+	top: 0.5em;
+	right: 0.5em;
+	width: 3em;
+	height: 3em;
+	/* margin: 0; */
+	transition: 0.3s;
+}
+
+main{
+	padding-top: 12em;
+}
+.main-little{
+	padding-top: 3em;
+}
+.presentation-pro{
+	border-top: solid 2px #555;
+}
+.presentation-perso{
+	transition: 0.3s;
+	
+}
+.presentation-perso-container{
+	display: flex;
+	flex-direction: column;
+	
+}
+.presentation-perso-title{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	margin-top: 0.5em;
+}
+
+.presentation-perso-title-text{
+	text-transform: capitalize;
+	font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	color:#555;
+	margin: 0.5em 0 0.5em 1.5em;
+}
+
+.presentation-perso-title-puce{
+	font-size: 1.75em;
+	margin-left: 0.8em;
+	color: black;
+}
+
+.presentation-perso-content{
+	box-sizing: content-box;
+	padding: 0em 1em;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 0.25em 0;
+}
+
+.presentation-perso-content-logo{
+	width: 1.5rem;
+	height: auto;
+}
+
+.presentation-perso-content-text{
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	margin-left: 1em;
+	color: #666;
+}
+
+.presentation-perso-content-text-p{
+	line-height: 1.1em;
+	text-indent: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+.presentation-pro {
+	border-top: 2px solid #666;
+	margin: 1em auto;
+	width: 90%;
+}
+
+.curiculum-title, .savoirs-faire-title{
+	font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+	font-weight: 800;
+	font-size: 1.5em;
+	text-align: center;
+	margin-top: 0.5em;
+	color: #666;
+	text-transform: capitalize;
+}
+.curiculum-formation-date{
+	font-weight: bold;
+	margin: 1.0em 0em 0.5em 1em;
+}
+
+.curiculum-formation-text-p, .curiculum-formation-date, .curiculum-text-p, .savoirs-faire-p, .curiculum-text-p2{
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	color: #666;
+	
+}
+.curiculum-text-p2{
+	margin-top: 0.3em;
+}
+
+.curiculum-formation-text-puce, .curiculum-text-puce{
+	font-size: 1.75em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	color: black;
+	
+}
+.curiculum-formation-text-list, .curiculum-text-list{
+	box-sizing: content-box;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 0.25em 0;
+}
+.curiculum-text-list{
+	align-items: flex-start;
+	margin:1em 0 0 0;
+}
+.savoirs-faire-p{
+	margin: 1em 1em 0 1em;
+}
+.curiculum-text-p>span, .savoirs-faire-p>span{
+	font-weight: 800;
+}
+
+footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1.5em;
+}
+
+.footer-button{
+	border:none;
+	box-shadow: 4px 4px 5px #555;
+	color: #555;
+	font-weight: 800;
+	font-size: 1.0em;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;;
+	background-color: #c8beb7;
+	padding: 0.6em 1em;
+	margin:0 0.5em 2em 0.5em;
+	border-radius: 5px;
+	transition: 0.3s;	
+}
+
+.footer-button:hover{
+	cursor: pointer;
+	background-color: #c9ae9a;
+}
+
+@media (min-width : 350px){
+.header-image-container{
+	padding-right: 1.5em;
+
+}
+.header-image{
+		width: 130px;
+		height: 130px;
+	}
+	
+.header-image-little{
+	position:fixed;
+	top: 0.5em;
+	right: 8vw;
+	width: 3em;
+	height: 3em;
+	/* margin: 0; */
+	transition: 0.3s;
+}
+	.header-name{
+		margin: 0.7rem 0 0 10vw;
+	}
+	.header-work-designation{
+		margin: 3em 0.5 0 0.5;
+	}
+}
+
+@media (min-width : 350px){
+	.header-name{
+		font-size: 2em;
+
+		margin: 0.7rem 0 0 8vw;
+	}
+	.header-image-container-little{
+		height: 4em; 
+	}
+	.header-image-little{
+		position:initial;
+		width: 3em;
+		height: 3em;
+		/* margin: 0; */
+		transition: 0.3s;
+	}
+}
+@media (min-width : 420px){
+	.header-image{
+		width: 150px;
+		height: 150px;
+	}
+	
+	.header-image-little{
+		position:initial;
+		width: 3em;
+		height: 3em;
+		/* margin: 0; */
+		transition: 0.3s;
+	}
+
+}
+@media (min-width : 600px){
+
+	.presentation-perso{
+		position:fixed;
+		width: 40%;
+		max-width: 320px;
+		max-height: calc(100vh - 8em);
+		overflow-y: auto;
+		border-right: #555 solid 1px;
+		top: 12em;
+		}
+	.presentation-perso-little{
+		top:3em;
+	} 
+
+	.presentation-pro{
+		margin: 0 0 0 calc(40% + 1em);
+		width: calc(60% - 1em);
+		border: none;
+		}
+	.presentation-pro-little{
+		margin-top: -3em;
+	}
+}
+@media (min-height : 600px) and (min-width : 600px){
+	.header-little{
+		height: 7em;
+		}
+	.header-image-container-little{
+		height: 7em;
+	}
+	.header-image-little{
+		position:initial;
+		width: 70px;
+		height: 70px;
+		/* margin: 0; */
+		transition: 0.3s;
+	}
+	.hide-header-work-designation
+	{
+		display: block;
+		width: 70%;
+		text-align: left;
+	}
+	.presentation-perso-little{
+		top:7em;
+	}
+	.presentation-pro-little{
+		margin-top: 1em;
+	}
+}
+
+@media (min-height : 600px) and (min-width : 650px){
+	.header-image-little{
+		position:initial;
+		width: 70px;
+		height: 70px;
+		/* margin: 0; */
+		transition: 0.3s;
+	}
+
+}
